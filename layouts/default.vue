@@ -8,6 +8,10 @@
       <nuxt-link to="/asyncdata">async-data</nuxt-link>
       <nuxt-link to="/authroutes">auth-routes</nuxt-link>
       <nuxt-link to="/cachedcomponents">cached-components</nuxt-link>      
+      <nuxt-link to="/defaultlayouts">default-layout</nuxt-link>      
+      <nuxt-link to="/customloading">customloading</nuxt-link>      
+      <nuxt-link to="/customroutes">customroutes</nuxt-link>      
+      <nuxt-link to="/dynamiccomponents">dynamiccomponents</nuxt-link>      
     </p>
     <div class="main">
       <nuxt/>

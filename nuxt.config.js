@@ -25,6 +25,7 @@ module.exports  = {
 
 
   // https://zh.nuxtjs.org/api/configuration-css
+  //https://nuxtjs.org/examples/custom-loading
   css:[
     '@/assets/scss/common.css',
     '@/assets/scss/index.scss'
