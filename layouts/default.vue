@@ -1,6 +1,18 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="wrapper">
+    <div class="header">
+      <nuxt-link to="/">NUXT Examples</nuxt-link>
+    </div>
+    <p class="links">
+      <nuxt-link to="/async-component-injection">async-component-injection</nuxt-link>
+      <nuxt-link to="/">async-data</nuxt-link>
+      <nuxt-link to="/">auth-routes</nuxt-link>
+      <nuxt-link to="/">axios</nuxt-link>
+      <nuxt-link to="/">cached-components</nuxt-link>
+    </p>
+    <div class="main">
+      <nuxt/>
+    </div>
   </div>
 </template>
 
@@ -48,5 +60,9 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+.links{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
 }
 </style>

@@ -10,13 +10,23 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono', type: 'text/css' }
     ]
   },
   /*
   ** Customize the progress bar color
+  loading也可以自定义组件
+  https://nuxtjs.org/api/configuration-loading
   */
   loading: { color: '#3B8070' },
+
+
+  // https://zh.nuxtjs.org/api/configuration-css
+  css:[
+    '@/assets/scss/common.css',
+    '@/assets/scss/index.scss'
+  ],
   /*
   ** Build configuration
   */
@@ -34,5 +44,12 @@ module.exports = {
         })
       }
     }
+  },
+  
+  generate: {
+    routes: [
+      '/async_component_injection/deep-dive-into-ocean',
+      '/async_component_injection/welcome-to-my-blog'
+    ]
   }
 }
