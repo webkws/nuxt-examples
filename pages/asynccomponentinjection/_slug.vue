@@ -7,8 +7,8 @@
 <script>
 //see https://vuejs.org/v2/guide/components-dynamic-async.html#Handling-Loading-State
 const getCom = (slug) => ({
-  component: import(`@/components/${slug}.vue`),
-  error: require("@/components/404")
+  component: import(`~/components/${slug}.vue`),
+  error: require("~/components/404")
 });
 
 export default {

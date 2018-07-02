@@ -1,4 +1,6 @@
-module.exports = {
+const bodyParser = require('body-parser')
+const session = require('express-session')
+module.exports  = {
   /*
   ** Headers of the page
   */
@@ -41,6 +43,7 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
+
         })
       }
     }
@@ -48,8 +51,38 @@ module.exports = {
   
   generate: {
     routes: [
-      '/async_component_injection/deep-dive-into-ocean',
-      '/async_component_injection/welcome-to-my-blog'
+      '/asynccomponentinjection/deep-dive-into-ocean',
+      '/asynccomponentinjection/welcome-to-my-blog'
     ]
+  },
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
+  ],
+  proxy: [
+    ['/dog', { target: 'https://dog.ceo/', pathRewrite: { '^/dog': '/api/breeds/image/random' } }]
+  ],
+  serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // session middleware
+    session({
+      secret: 'super-secret-key',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 }
+    }),
+    // Api middleware
+    // We add /api/login & /api/logout routes
+    '~/api'
+  ],
+  render: {
+    //https://nuxtjs.org/api/configuration-render#the-render-property
+    bundleRenderer: {
+      cache: require('lru-cache')({
+        max: 1000,
+        maxAge: 1000 * 60 * 15
+      })
+    }
   }
 }

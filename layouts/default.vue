@@ -4,11 +4,10 @@
       <nuxt-link to="/">NUXT Examples</nuxt-link>
     </div>
     <p class="links">
-      <nuxt-link to="/async-component-injection">async-component-injection</nuxt-link>
-      <nuxt-link to="/">async-data</nuxt-link>
-      <nuxt-link to="/">auth-routes</nuxt-link>
-      <nuxt-link to="/">axios</nuxt-link>
-      <nuxt-link to="/">cached-components</nuxt-link>
+      <nuxt-link to="/asynccomponentinjection">async-component-injection</nuxt-link>
+      <nuxt-link to="/asyncdata">async-data</nuxt-link>
+      <nuxt-link to="/authroutes">auth-routes</nuxt-link>
+      <nuxt-link to="/cachedcomponents">cached-components</nuxt-link>      
     </p>
     <div class="main">
       <nuxt/>

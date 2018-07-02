@@ -11,16 +11,16 @@
 
 <script>
 export default {
-  name: "async_component_injection",
+  name: "asynccomponentinjection",
   data: () => ({
     posts: [
       {
         title: "Deep dive into the Ocean",
-        link: "/async_component_injection/deep-dive-into-ocean"
+        link: "/asynccomponentinjection/deep-dive-into-ocean"
       },
       {
         title: "Welcome to my blog",
-        link: "/async_component_injection/welcome-to-my-blog"
+        link: "/asynccomponentinjection/welcome-to-my-blog"
       }
     ]
   })
